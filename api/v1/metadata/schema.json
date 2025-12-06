@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Numbers4 API Schema",
+  "description": "Numbers4 静的 API のスキーマ定義",
+  "definitions": {
+    "prize": {
+      "type": "object",
+      "description": "配当金情報",
+      "properties": {
+        "straight": {
+          "type": ["integer", "null"],
+          "description": "ストレート当選金（円）"
+        },
+        "box": {
+          "type": ["integer", "null"],
+          "description": "ボックス当選金（円）"
+        },
+        "set_straight": {
+          "type": ["integer", "null"],
+          "description": "セットストレート当選金（円）"
+        },
+        "set_box": {
+          "type": ["integer", "null"],
+          "description": "セットボックス当選金（円）"
+        }
+      }
+    },
+    "digits": {
+      "type": "array",
+      "description": "当選番号の各桁 [千の位, 百の位, 十の位, 一の位]",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 9
+      },
+      "minItems": 4,
+      "maxItems": 4
+    }
+  },
+  "oneOf": [
+    {
+      "title": "latest.json",
+      "type": "object",
+      "required": ["draw_no", "date", "digits", "prize"],
+      "properties": {
+        "draw_no": {
+          "type": "integer",
+          "description": "回号"
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "抽選日 (YYYY-MM-DD)"
+        },
+        "digits": { "$ref": "#/definitions/digits" },
+        "winning_number": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$",
+          "description": "当選番号 (4桁文字列)"
+        },
+        "prize": { "$ref": "#/definitions/prize" }
+      }
+    },
+    {
+      "title": "numbers4_all_min.json",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["draw_no", "date", "digits"],
+        "properties": {
+          "draw_no": {
+            "type": "integer",
+            "description": "回号"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "抽選日 (YYYY-MM-DD)"
+          },
+          "digits": { "$ref": "#/definitions/digits" }
+        }
+      }
+    },
+    {
+      "title": "numbers4_all_full.json",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["draw_no", "date", "digits", "prize"],
+        "properties": {
+          "draw_no": {
+            "type": "integer",
+            "description": "回号"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "抽選日 (YYYY-MM-DD)"
+          },
+          "digits": { "$ref": "#/definitions/digits" },
+          "winning_number": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$",
+            "description": "当選番号 (4桁文字列)"
+          },
+          "prize": { "$ref": "#/definitions/prize" }
+        }
+      }
+    },
+    {
+      "title": "version.json",
+      "type": "object",
+      "required": ["version", "schema", "last_update", "latest_draw_no"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "データバージョン (YYYY-MM-DD-NNN)"
+        },
+        "schema": {
+          "type": "string",
+          "description": "スキーマバージョン (semver)"
+        },
+        "last_update": {
+          "type": "string",
+          "format": "date-time",
+          "description": "最終更新日時 (ISO 8601)"
+        },
+        "latest_draw_no": {
+          "type": "integer",
+          "description": "最新回号"
+        },
+        "latest_date": {
+          "type": "string",
+          "format": "date",
+          "description": "最新抽選日"
+        },
+        "total_records": {
+          "type": "integer",
+          "description": "総レコード数"
+        }
+      }
+    }
+  ]
+}

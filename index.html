@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numbers4 API - Static JSON Data</title>
+  <style>
+    :root {
+      --primary: #4CAF50;
+      --bg: #1a1a2e;
+      --card-bg: #16213e;
+      --text: #e8e8e8;
+      --text-secondary: #a0a0a0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { 
+      font-size: 2rem; 
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, var(--primary), #81C784);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--text-secondary); margin-bottom: 2rem; }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card h2 { font-size: 1.2rem; margin-bottom: 1rem; }
+    .endpoint {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .endpoint:last-child { border-bottom: none; }
+    .endpoint a {
+      color: var(--primary);
+      text-decoration: none;
+      font-family: monospace;
+    }
+    .endpoint a:hover { text-decoration: underline; }
+    .endpoint .desc { color: var(--text-secondary); font-size: 0.9rem; }
+    .latest-box {
+      background: linear-gradient(135deg, #2d3748, #1a202c);
+      border: 1px solid var(--primary);
+    }
+    .latest-number {
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 0.5rem;
+      margin: 1rem 0;
+    }
+    .latest-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      color: var(--text-secondary);
+    }
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎱 Numbers4 API</h1>
+    <p class="subtitle">GitHub Pages による静的 JSON データ配信</p>
+    
+    <div class="card latest-box">
+      <h2>📌 最新当選番号</h2>
+      <div class="latest-number" id="latest-number">----</div>
+      <div class="latest-meta">
+        <span>第<span id="latest-draw">---</span>回</span>
+        <span id="latest-date">----/--/--</span>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>📡 API エンドポイント</h2>
+      <div class="endpoint">
+        <div>
+          <a href="./api/v1/latest.json">/api/v1/latest.json</a>
+          <div class="desc">最新1件のみ（軽量）</div>
+        </div>
+      </div>
+      <div class="endpoint">
+        <div>
+          <a href="./api/v1/numbers4_all_min.json">/api/v1/numbers4_all_min.json</a>
+          <div class="desc">全履歴（番号のみ・軽量版）</div>
+        </div>
+      </div>
+      <div class="endpoint">
+        <div>
+          <a href="./api/v1/numbers4_all_full.json">/api/v1/numbers4_all_full.json</a>
+          <div class="desc">全履歴（配当金含む・詳細版）</div>
+        </div>
+      </div>
+      <div class="endpoint">
+        <div>
+          <a href="./api/v1/version.json">/api/v1/version.json</a>
+          <div class="desc">バージョン情報（更新判定用）</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>📖 使用方法</h2>
+      <pre style="background: #0d1117; padding: 1rem; border-radius: 8px; overflow-x: auto;">
+<code style="color: #c9d1d9;">// JavaScript
+const res = await fetch(
+  'https://hazimekom.github.io/numbers4-api/api/v1/latest.json'
+);
+const data = await res.json();
+console.log(data.digits); // [1, 2, 3, 4]</code></pre>
+    </div>
+    
+    <footer>
+      <p>© 2025 Numbers4 Project | <a href="https://github.com/hazimekom/numbers4-api">GitHub</a></p>
+    </footer>
+  </div>
+  
+  <script>
+    fetch('./api/v1/latest.json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('latest-number').textContent = 
+          data.digits.join('');
+        document.getElementById('latest-draw').textContent = data.draw_no;
+        document.getElementById('latest-date').textContent = data.date;
+      })
+      .catch(() => {
+        document.getElementById('latest-number').textContent = 'N/A';
+      });
+  </script>
+</body>
+</html>
