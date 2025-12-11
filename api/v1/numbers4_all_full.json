@@ -116482,5 +116482,39 @@
       "set_straight": 497200,
       "set_box": 38200
     }
+  },
+  {
+    "draw_no": 6875,
+    "date": "2025-12-10",
+    "digits": [
+      5,
+      2,
+      7,
+      2
+    ],
+    "winning_number": "5272",
+    "prize": {
+      "straight": 494500,
+      "box": 41200,
+      "set_straight": 267800,
+      "set_box": 20600
+    }
+  },
+  {
+    "draw_no": 6876,
+    "date": "2025-12-11",
+    "digits": [
+      2,
+      2,
+      0,
+      8
+    ],
+    "winning_number": "2208",
+    "prize": {
+      "straight": 1040900,
+      "box": 86700,
+      "set_straight": 563800,
+      "set_box": 43300
+    }
   }
 ]

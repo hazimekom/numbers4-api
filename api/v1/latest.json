@@ -1,17 +1,17 @@
 {
-  "draw_no": 6874,
-  "date": "2025-12-09",
+  "draw_no": 6876,
+  "date": "2025-12-11",
   "digits": [
-    3,
-    1,
     2,
-    3
+    2,
+    0,
+    8
   ],
-  "winning_number": "3123",
+  "winning_number": "2208",
   "prize": {
-    "straight": 918000,
-    "box": 76500,
-    "set_straight": 497200,
-    "set_box": 38200
+    "straight": 1040900,
+    "box": 86700,
+    "set_straight": 563800,
+    "set_box": 43300
   }
 }
