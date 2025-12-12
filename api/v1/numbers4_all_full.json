@@ -116516,5 +116516,22 @@
       "set_straight": 563800,
       "set_box": 43300
     }
+  },
+  {
+    "draw_no": 6877,
+    "date": "2025-12-12",
+    "digits": [
+      2,
+      5,
+      2,
+      8
+    ],
+    "winning_number": "2528",
+    "prize": {
+      "straight": 706200,
+      "box": 58800,
+      "set_straight": 382500,
+      "set_box": 29400
+    }
   }
 ]
