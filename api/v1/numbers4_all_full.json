@@ -116601,5 +116601,22 @@
       "set_straight": 155800,
       "set_box": 6200
     }
+  },
+  {
+    "draw_no": 6882,
+    "date": "2025-12-19",
+    "digits": [
+      4,
+      9,
+      4,
+      4
+    ],
+    "winning_number": "4944",
+    "prize": {
+      "straight": 796700,
+      "box": 199100,
+      "set_straight": 497900,
+      "set_box": 99500
+    }
   }
 ]
