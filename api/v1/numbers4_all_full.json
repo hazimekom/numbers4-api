@@ -116720,5 +116720,22 @@
       "set_straight": 106100,
       "set_box": 15100
     }
+  },
+  {
+    "draw_no": 6889,
+    "date": "2025-12-30",
+    "digits": [
+      7,
+      2,
+      0,
+      2
+    ],
+    "winning_number": "7202",
+    "prize": {
+      "straight": 442000,
+      "box": 36800,
+      "set_straight": 239400,
+      "set_box": 18400
+    }
   }
 ]
