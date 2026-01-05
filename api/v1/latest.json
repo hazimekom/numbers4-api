@@ -1,17 +1,17 @@
 {
-  "draw_no": 6889,
-  "date": "2025-12-30",
+  "draw_no": 6890,
+  "date": "2026-01-05",
   "digits": [
     7,
+    5,
     2,
-    0,
-    2
+    6
   ],
-  "winning_number": "7202",
+  "winning_number": "7526",
   "prize": {
-    "straight": 442000,
-    "box": 36800,
-    "set_straight": 239400,
-    "set_box": 18400
+    "straight": 1042200,
+    "box": 43400,
+    "set_straight": 542800,
+    "set_box": 21700
   }
 }
