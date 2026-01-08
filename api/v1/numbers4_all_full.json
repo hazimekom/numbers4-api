@@ -116788,5 +116788,22 @@
       "set_straight": 146200,
       "set_box": 5800
     }
+  },
+  {
+    "draw_no": 6893,
+    "date": "2026-01-08",
+    "digits": [
+      1,
+      6,
+      3,
+      2
+    ],
+    "winning_number": "1632",
+    "prize": {
+      "straight": 693500,
+      "box": 28800,
+      "set_straight": 361100,
+      "set_box": 14400
+    }
   }
 ]
