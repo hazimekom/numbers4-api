@@ -116822,5 +116822,39 @@
       "set_straight": 174300,
       "set_box": 13400
     }
+  },
+  {
+    "draw_no": 6895,
+    "date": "2026-01-12",
+    "digits": [
+      2,
+      8,
+      2,
+      7
+    ],
+    "winning_number": "2827",
+    "prize": {
+      "straight": 870900,
+      "box": 72500,
+      "set_straight": 471700,
+      "set_box": 36200
+    }
+  },
+  {
+    "draw_no": 6896,
+    "date": "2026-01-13",
+    "digits": [
+      2,
+      6,
+      9,
+      9
+    ],
+    "winning_number": "2699",
+    "prize": {
+      "straight": 1040700,
+      "box": 86700,
+      "set_straight": 563700,
+      "set_box": 43300
+    }
   }
 ]
