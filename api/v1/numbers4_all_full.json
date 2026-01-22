@@ -116958,5 +116958,22 @@
       "set_straight": 261500,
       "set_box": 10400
     }
+  },
+  {
+    "draw_no": 6903,
+    "date": "2026-01-22",
+    "digits": [
+      6,
+      0,
+      2,
+      2
+    ],
+    "winning_number": "6022",
+    "prize": {
+      "straight": 356500,
+      "box": 29700,
+      "set_straight": 193100,
+      "set_box": 14800
+    }
   }
 ]
