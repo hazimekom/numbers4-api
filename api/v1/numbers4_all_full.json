@@ -116975,5 +116975,22 @@
       "set_straight": 193100,
       "set_box": 14800
     }
+  },
+  {
+    "draw_no": 6904,
+    "date": "2026-01-23",
+    "digits": [
+      0,
+      5,
+      1,
+      5
+    ],
+    "winning_number": "0515",
+    "prize": {
+      "straight": 383000,
+      "box": 31900,
+      "set_straight": 207400,
+      "set_box": 15900
+    }
   }
 ]
