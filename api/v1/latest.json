@@ -1,17 +1,17 @@
 {
-  "draw_no": 6910,
-  "date": "2026-02-02",
+  "draw_no": 6911,
+  "date": "2026-02-03",
   "digits": [
-    9,
-    9,
-    4,
-    5
+    3,
+    7,
+    2,
+    7
   ],
-  "winning_number": "9945",
+  "winning_number": "3727",
   "prize": {
-    "straight": 996000,
-    "box": 83000,
-    "set_straight": 539500,
-    "set_box": 41500
+    "straight": 1116300,
+    "box": 93000,
+    "set_straight": 604600,
+    "set_box": 46500
   }
 }
