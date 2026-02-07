@@ -1,0 +1,43 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".github/**",
+      "**/.*",
+      "**/node_modules/**",
+      "**/*firebase-adminsdk-*.json",
+      "**/*-firebase-adminsdk-*.json",
+      "secrets/**",
+      "**/secrets/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.json",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600"
+          }
+        ]
+      },
+      {
+        "source": "/api/v1/version.json",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "max-age=60"
+          }
+        ]
+      }
+    ]
+  }
+}
