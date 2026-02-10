@@ -117179,5 +117179,22 @@
       "set_straight": 423600,
       "set_box": 16900
     }
+  },
+  {
+    "draw_no": 6916,
+    "date": "2026-02-10",
+    "digits": [
+      3,
+      3,
+      9,
+      5
+    ],
+    "winning_number": "3395",
+    "prize": {
+      "straight": 970000,
+      "box": 80800,
+      "set_straight": 525400,
+      "set_box": 40400
+    }
   }
 ]
