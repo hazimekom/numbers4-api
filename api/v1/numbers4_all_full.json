@@ -117230,5 +117230,22 @@
       "set_straight": 634300,
       "set_box": 48700
     }
+  },
+  {
+    "draw_no": 6919,
+    "date": "2026-02-13",
+    "digits": [
+      6,
+      3,
+      7,
+      6
+    ],
+    "winning_number": "6376",
+    "prize": {
+      "straight": 416000,
+      "box": 34600,
+      "set_straight": 225300,
+      "set_box": 17300
+    }
   }
 ]
