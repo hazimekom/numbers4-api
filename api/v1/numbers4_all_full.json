@@ -117281,5 +117281,22 @@
       "set_straight": 367400,
       "set_box": 52400
     }
+  },
+  {
+    "draw_no": 6922,
+    "date": "2026-02-18",
+    "digits": [
+      8,
+      4,
+      4,
+      0
+    ],
+    "winning_number": "8440",
+    "prize": {
+      "straight": 416400,
+      "box": 34700,
+      "set_straight": 225500,
+      "set_box": 17300
+    }
   }
 ]
