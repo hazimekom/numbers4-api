@@ -5,7 +5,12 @@ on:
     branches: [ main ]
     paths:
       - "api/**"
+      - "data/**"
       - "index.html"
+      - ".github/workflows/firebase-deploy.yml"
+  schedule:
+    - cron: '25 12 * * *'  # 毎日21:25 JST
+    - cron: '55 13 * * *'  # 毎日22:55 JST（保険実行）
   workflow_dispatch:
 
 permissions:
