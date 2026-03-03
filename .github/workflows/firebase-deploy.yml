@@ -7,6 +7,7 @@ on:
       - "api/**"
       - "data/**"
       - "index.html"
+      - "firebase.json"
       - ".github/workflows/firebase-deploy.yml"
   schedule:
     - cron: '25 12 * * *'  # 毎日21:25 JST
