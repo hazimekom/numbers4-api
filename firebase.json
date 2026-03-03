@@ -15,7 +15,7 @@
     ],
     "headers": [
       {
-        "source": "**/*.json",
+        "source": "/api/v1/numbers4_all_*.json",
         "headers": [
           {
             "key": "Access-Control-Allow-Origin",
