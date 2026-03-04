@@ -6543,5 +6543,22 @@
       "set_straight": 350500,
       "set_box": 14000
     }
+  },
+  {
+    "draw_no": 6932,
+    "date": "2026-03-04",
+    "digits": [
+      8,
+      4,
+      0,
+      4
+    ],
+    "winning_number": "8404",
+    "prize": {
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null
+    }
   }
 ]
