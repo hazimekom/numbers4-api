@@ -6555,10 +6555,10 @@
     ],
     "winning_number": "8404",
     "prize": {
-      "straight": null,
-      "box": null,
-      "set_straight": null,
-      "set_box": null
+      "straight": 1111500,
+      "box": 92600,
+      "set_straight": 602000,
+      "set_box": 46300
     }
   }
 ]
