@@ -6577,5 +6577,22 @@
       "set_straight": 500800,
       "set_box": 38500
     }
+  },
+  {
+    "draw_no": 6934,
+    "date": "2026-03-06",
+    "digits": [
+      7,
+      5,
+      9,
+      2
+    ],
+    "winning_number": "7592",
+    "prize": {
+      "straight": 998300,
+      "box": 41500,
+      "set_straight": 519900,
+      "set_box": 20700
+    }
   }
 ]
