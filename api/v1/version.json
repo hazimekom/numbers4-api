@@ -1,8 +1,9 @@
 {
   "version": "2026-03-09-6935",
   "schema": "1.0.0",
-  "last_update": "2026-03-09T21:18:22.484940+09:00",
+  "last_update": "2026-03-09T21:40:15.358410+09:00",
   "latest_draw_no": 6935,
   "latest_date": "2026-03-09",
-  "total_records": 6935
+  "total_records": 6935,
+  "source_sha256": "22b8e7e9d32b12ce1161325be29516d12ab1df483573a735cf7bda469cdb1515"
 }

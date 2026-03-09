@@ -10,8 +10,8 @@
   "winning_number": "4819",
   "prize": {
     "straight": 785500,
-    "box": 3270000,
-    "set_straight": 40910000,
-    "set_box": 1630000
+    "box": 32700,
+    "set_straight": 409100,
+    "set_box": 16300
   }
 }
