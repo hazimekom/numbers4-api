@@ -1,9 +1,9 @@
 {
-  "version": "2026-03-10-6936",
+  "version": "2026-03-11-6937",
   "schema": "1.0.0",
-  "last_update": "2026-03-10T20:30:05.576368+09:00",
-  "latest_draw_no": 6936,
-  "latest_date": "2026-03-10",
-  "total_records": 6936,
-  "source_sha256": "5fd514f50afc01ff2cfd88dbf9cfb85f1e2a8bf62ce57b3625369c7210a2aae4"
+  "last_update": "2026-03-11T20:30:06.956661+09:00",
+  "latest_draw_no": 6937,
+  "latest_date": "2026-03-11",
+  "total_records": 6937,
+  "source_sha256": "741a974f0a56e487976bfeaa56d7bbb620832ce56ba7e5fb7750980e0ad7b672"
 }
