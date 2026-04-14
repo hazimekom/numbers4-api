@@ -1,17 +1,17 @@
 {
-  "draw_no": 6960,
-  "date": "2026-04-13",
+  "draw_no": 6961,
+  "date": "2026-04-14",
   "digits": [
-    7,
     4,
-    9,
-    4
+    2,
+    4,
+    8
   ],
-  "winning_number": "7494",
+  "winning_number": "4248",
   "prize": {
-    "straight": 835300,
-    "box": 69600,
-    "set_straight": 452400,
-    "set_box": 34800
+    "straight": 1137200,
+    "box": 94700,
+    "set_straight": 615900,
+    "set_box": 47300
   }
 }
