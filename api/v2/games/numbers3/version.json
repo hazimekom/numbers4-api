@@ -1,10 +1,10 @@
 {
   "game": "numbers3",
-  "version": "stub-0001",
+  "version": "2026-04-24-6969",
   "schema": "2.0.0",
-  "last_update": "2026-04-25T20:07:20+09:00",
-  "latest_draw_no": 0,
-  "latest_date": null,
-  "total_records": 0,
-  "source_sha256": null
+  "last_update": "2026-04-25T21:27:33.772093+09:00",
+  "latest_draw_no": 6969,
+  "latest_date": "2026-04-24",
+  "total_records": 516,
+  "source_sha256": "49b3ab97c708f193811871c579ecba4cc28b7aa4498da925c78cbb5be061ddbc"
 }
