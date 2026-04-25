@@ -1,0 +1,22 @@
+{
+  "game": "numbers3",
+  "draw_no": 0,
+  "draw_date": null,
+  "result": {
+    "values": [
+      0,
+      0,
+      0
+    ],
+    "display": "000"
+  },
+  "prize": {
+    "straight": null,
+    "box": null,
+    "set": null,
+    "mini": null,
+    "set_straight": null,
+    "set_box": null
+  },
+  "status": "stub"
+}

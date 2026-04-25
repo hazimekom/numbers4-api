@@ -1,0 +1,16 @@
+{
+  "schema": "2.0.0",
+  "generated_at": "2026-04-25T20:07:20+09:00",
+  "games": [
+    {
+      "id": "numbers4",
+      "name": "ナンバーズ4",
+      "api_path": "/api/v2/games/numbers4/version.json"
+    },
+    {
+      "id": "numbers3",
+      "name": "ナンバーズ3",
+      "api_path": "/api/v2/games/numbers3/version.json"
+    }
+  ]
+}
