@@ -1,0 +1,20 @@
+{
+  "game": "numbers4",
+  "draw_no": 6942,
+  "draw_date": "2026-03-18",
+  "result": {
+    "values": [
+      6,
+      4,
+      4,
+      9
+    ],
+    "display": "6449"
+  },
+  "prize": {
+    "straight": 650300,
+    "box": 54100,
+    "set_straight": 352200,
+    "set_box": 27000
+  }
+}
