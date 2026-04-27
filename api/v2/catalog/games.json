@@ -1,16 +1,59 @@
 {
   "schema": "2.0.0",
-  "generated_at": "2026-04-26T16:28:07+09:00",
+  "generated_at": "2026-04-27T23:28:44+09:00",
   "games": [
     {
       "id": "numbers4",
       "name": "ナンバーズ4",
-      "api_path": "/api/v2/games/numbers4/version.json"
+      "display_name": "ナンバーズ4",
+      "app_id": "numbers4_ninja",
+      "app_display_name": "Numbers4 忍者",
+      "number_count": 4,
+      "min_value": 0,
+      "max_value": 9,
+      "allow_duplicates": true,
+      "has_bonus": false,
+      "api_path": "/api/v2/games/numbers4/version.json",
+      "api": {
+        "namespace": "numbers4",
+        "version_path": "/api/v2/games/numbers4/version.json",
+        "latest_path": "/api/v2/games/numbers4/latest.json",
+        "draws_full_path": "/api/v2/games/numbers4/draws.full.json"
+      },
+      "prediction": {
+        "purchase_modes": [
+          "straight",
+          "box",
+          "set"
+        ]
+      }
     },
     {
       "id": "numbers3",
       "name": "ナンバーズ3",
-      "api_path": "/api/v2/games/numbers3/version.json"
+      "display_name": "ナンバーズ3",
+      "app_id": "numbers3_kunoichi",
+      "app_display_name": "ナンバーズ3予想AI KUNOICHI",
+      "number_count": 3,
+      "min_value": 0,
+      "max_value": 9,
+      "allow_duplicates": true,
+      "has_bonus": false,
+      "api_path": "/api/v2/games/numbers3/version.json",
+      "api": {
+        "namespace": "numbers3",
+        "version_path": "/api/v2/games/numbers3/version.json",
+        "latest_path": "/api/v2/games/numbers3/latest.json",
+        "draws_full_path": "/api/v2/games/numbers3/draws.full.json"
+      },
+      "prediction": {
+        "purchase_modes": [
+          "straight",
+          "box",
+          "set",
+          "mini"
+        ]
+      }
     }
   ]
 }
