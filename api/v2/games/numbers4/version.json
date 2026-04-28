@@ -1,10 +1,10 @@
 {
   "game": "numbers4",
-  "version": "2026-03-18-6942",
+  "version": "2026-04-28-6971",
   "schema": "2.0.0",
-  "last_update": "2026-04-28T14:57:33.014666+00:00",
-  "latest_draw_no": 6942,
-  "latest_date": "2026-03-18",
-  "total_records": 6942,
-  "source_sha256": "35f0fd0328a713e0e87d8a4f923b81b577721ccf6ed2c0befed627baae541206"
+  "last_update": "2026-04-28T15:07:53.054451+00:00",
+  "latest_draw_no": 6971,
+  "latest_date": "2026-04-28",
+  "total_records": 6971,
+  "source_sha256": "fded3a80801bf31e6aa013c64c8c48a6ce73aacd9dd6c5d626cc9c38dff1ea28"
 }
