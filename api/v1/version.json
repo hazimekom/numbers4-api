@@ -1,11 +1,11 @@
 {
   "version": "2026-04-28-6971",
   "schema": "1.0.0",
-  "last_update": "2026-04-28T20:39:36.968097+09:00",
+  "last_update": "2026-04-28T21:23:10.210168+09:00",
   "latest_draw_no": 6971,
   "latest_date": "2026-04-28",
   "total_records": 6971,
-  "source_sha256": "695759727102060b9f9be343aa4a46a4ad431414b2581f299a3bba47af96eb79",
+  "source_sha256": "8797a7f75eebac1ed32c543bbb966741e493cf8d6c9a049c0b25df8f7a0809c3",
   "update_source": "paypay",
   "detected_latest_draw_no": 6971,
   "verification_status": "passed",
