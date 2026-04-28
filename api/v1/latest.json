@@ -9,7 +9,7 @@
   ],
   "winning_number": "9678",
   "prize": {
-    "straight": null,
+    "straight": 195200,
     "box": 8100,
     "set_straight": 101600,
     "set_box": 4000
