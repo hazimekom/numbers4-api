@@ -132409,5 +132409,81 @@
       "set_box": 4900,
       "mini": 5900
     }
+  },
+  {
+    "draw_no": 6970,
+    "draw_date": "2026-04-27",
+    "result": {
+      "values": [
+        4,
+        2,
+        5
+      ],
+      "display": "425"
+    },
+    "prize": {
+      "straight": 60400,
+      "box": 10000,
+      "set_straight": 35200,
+      "set_box": 5000,
+      "mini": 6000
+    }
+  },
+  {
+    "draw_no": 6971,
+    "draw_date": "2026-04-28",
+    "result": {
+      "values": [
+        8,
+        3,
+        7
+      ],
+      "display": "837"
+    },
+    "prize": {
+      "straight": 48000,
+      "box": 8000,
+      "set_straight": 28000,
+      "set_box": 4000,
+      "mini": 4800
+    }
+  },
+  {
+    "draw_no": 6972,
+    "draw_date": "2026-04-29",
+    "result": {
+      "values": [
+        8,
+        1,
+        8
+      ],
+      "display": "818"
+    },
+    "prize": {
+      "straight": 81000,
+      "box": 27000,
+      "set_straight": 54000,
+      "set_box": 13500,
+      "mini": 8100
+    }
+  },
+  {
+    "draw_no": 6973,
+    "draw_date": "2026-04-30",
+    "result": {
+      "values": [
+        0,
+        3,
+        5
+      ],
+      "display": "035"
+    },
+    "prize": {
+      "straight": 118200,
+      "box": 19700,
+      "set_straight": 68900,
+      "set_box": 9800,
+      "mini": 11800
+    }
   }
 ]
