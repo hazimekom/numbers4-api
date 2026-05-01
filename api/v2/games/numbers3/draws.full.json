@@ -127596,11 +127596,11 @@
       "display": "752"
     },
     "prize": {
-      "straight": 98700,
-      "box": 16400,
-      "set_straight": 57500,
-      "set_box": 8200,
-      "mini": 9800
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127615,11 +127615,11 @@
       "display": "652"
     },
     "prize": {
-      "straight": 87700,
-      "box": 14600,
-      "set_straight": 51100,
-      "set_box": 7300,
-      "mini": 8700
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127634,11 +127634,11 @@
       "display": "133"
     },
     "prize": {
-      "straight": 104000,
-      "box": 34600,
-      "set_straight": 69300,
-      "set_box": 17300,
-      "mini": 10400
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127653,11 +127653,11 @@
       "display": "157"
     },
     "prize": {
-      "straight": 82600,
-      "box": 13700,
-      "set_straight": 48100,
-      "set_box": 6800,
-      "mini": 8200
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127672,11 +127672,11 @@
       "display": "990"
     },
     "prize": {
-      "straight": 96500,
-      "box": 32100,
-      "set_straight": 64300,
-      "set_box": 16000,
-      "mini": 9600
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127691,11 +127691,11 @@
       "display": "990"
     },
     "prize": {
-      "straight": 87700,
-      "box": 29200,
-      "set_straight": 58400,
-      "set_box": 14600,
-      "mini": 8700
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127710,11 +127710,11 @@
       "display": "190"
     },
     "prize": {
-      "straight": 43000,
-      "box": 7100,
-      "set_straight": 25000,
-      "set_box": 3500,
-      "mini": 4300
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127729,11 +127729,11 @@
       "display": "502"
     },
     "prize": {
-      "straight": 103400,
-      "box": 17200,
-      "set_straight": 60300,
-      "set_box": 8600,
-      "mini": 10300
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127748,11 +127748,11 @@
       "display": "152"
     },
     "prize": {
-      "straight": 70100,
-      "box": 11600,
-      "set_straight": 40800,
-      "set_box": 5800,
-      "mini": 7000
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127767,11 +127767,11 @@
       "display": "122"
     },
     "prize": {
-      "straight": 74400,
-      "box": 24800,
-      "set_straight": 49600,
-      "set_box": 12400,
-      "mini": 7400
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127786,11 +127786,11 @@
       "display": "371"
     },
     "prize": {
-      "straight": 65500,
-      "box": 10900,
-      "set_straight": 38200,
-      "set_box": 5400,
-      "mini": 6500
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127805,11 +127805,11 @@
       "display": "611"
     },
     "prize": {
-      "straight": 82200,
-      "box": 27400,
-      "set_straight": 54800,
-      "set_box": 13700,
-      "mini": 8200
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127824,11 +127824,11 @@
       "display": "870"
     },
     "prize": {
-      "straight": 108200,
-      "box": 18000,
-      "set_straight": 63100,
-      "set_box": 9000,
-      "mini": 10800
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127843,11 +127843,11 @@
       "display": "263"
     },
     "prize": {
-      "straight": 115400,
-      "box": 19200,
-      "set_straight": 67300,
-      "set_box": 9600,
-      "mini": 11500
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127862,11 +127862,11 @@
       "display": "355"
     },
     "prize": {
-      "straight": 79000,
-      "box": 26300,
-      "set_straight": 52600,
-      "set_box": 13100,
-      "mini": 7900
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127881,11 +127881,11 @@
       "display": "680"
     },
     "prize": {
-      "straight": 124500,
-      "box": 20700,
-      "set_straight": 72600,
-      "set_box": 10300,
-      "mini": 12400
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127900,11 +127900,11 @@
       "display": "752"
     },
     "prize": {
-      "straight": 84100,
-      "box": 14000,
-      "set_straight": 49000,
-      "set_box": 7000,
-      "mini": 8400
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127919,11 +127919,11 @@
       "display": "902"
     },
     "prize": {
-      "straight": 80300,
-      "box": 13300,
-      "set_straight": 46800,
-      "set_box": 6600,
-      "mini": 8000
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127938,11 +127938,11 @@
       "display": "238"
     },
     "prize": {
-      "straight": 88700,
-      "box": 14700,
-      "set_straight": 51700,
-      "set_box": 7300,
-      "mini": 8800
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127957,11 +127957,11 @@
       "display": "564"
     },
     "prize": {
-      "straight": 71100,
-      "box": 11800,
-      "set_straight": 41400,
-      "set_box": 5900,
-      "mini": 7100
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127976,11 +127976,11 @@
       "display": "849"
     },
     "prize": {
-      "straight": 95800,
-      "box": 15900,
-      "set_straight": 55800,
-      "set_box": 7900,
-      "mini": 9500
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -127995,11 +127995,11 @@
       "display": "549"
     },
     "prize": {
-      "straight": 105200,
-      "box": 17500,
-      "set_straight": 61300,
-      "set_box": 8700,
-      "mini": 10500
+      "straight": null,
+      "box": null,
+      "set_straight": null,
+      "set_box": null,
+      "mini": null
     }
   },
   {
@@ -132484,6 +132484,25 @@
       "set_straight": 68900,
       "set_box": 9800,
       "mini": 11800
+    }
+  },
+  {
+    "draw_no": 6974,
+    "draw_date": "2026-05-01",
+    "result": {
+      "values": [
+        7,
+        0,
+        6
+      ],
+      "display": "706"
+    },
+    "prize": {
+      "straight": 127800,
+      "box": 21300,
+      "set_straight": 74500,
+      "set_box": 10600,
+      "mini": 12700
     }
   }
 ]
