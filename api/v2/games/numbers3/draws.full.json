@@ -132713,5 +132713,24 @@
       "set_box": 6200,
       "mini": 7400
     }
+  },
+  {
+    "draw_no": 6986,
+    "draw_date": "2026-05-19",
+    "result": {
+      "values": [
+        2,
+        8,
+        4
+      ],
+      "display": "284"
+    },
+    "prize": {
+      "straight": 100800,
+      "box": 16800,
+      "set_straight": 58800,
+      "set_box": 8400,
+      "mini": 10000
+    }
   }
 ]
