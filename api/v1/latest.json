@@ -1,17 +1,17 @@
 {
-  "draw_no": 6987,
-  "date": "2026-05-20",
+  "draw_no": 6988,
+  "date": "2026-05-21",
   "digits": [
-    7,
-    6,
-    8,
-    3
+    3,
+    9,
+    0,
+    7
   ],
-  "winning_number": "7683",
+  "winning_number": "3907",
   "prize": {
-    "straight": 1119400,
-    "box": 46600,
-    "set_straight": 583000,
-    "set_box": 23300
+    "straight": 588200,
+    "box": 24500,
+    "set_straight": 306300,
+    "set_box": 12200
   }
 }
