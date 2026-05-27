@@ -1,11 +1,11 @@
 {
   "game": "numbers3",
   "schema": "1.0.0",
-  "generated_at": "2026-05-26T20:59:11+09:00",
+  "generated_at": "2026-05-27T20:58:39+09:00",
   "source_label": "C:\\Users\\hk\\source\\numbers4\\numbers4\\core_systems\\data\\numbers3_results_v2.csv",
-  "latest_draw_no": 6991,
-  "latest_date": "2026-05-26",
-  "total_records": 6991,
+  "latest_draw_no": 6992,
+  "latest_date": "2026-05-27",
+  "total_records": 6992,
   "records": [
     {
       "draw_no": 1,
@@ -139823,6 +139823,26 @@
         "set_straight": 49600,
         "set_box": 12400,
         "mini": 7400
+      },
+      "payout_proxy_amount": null,
+      "source_label": "C:\\Users\\hk\\source\\numbers4\\numbers4\\core_systems\\data\\numbers3_results_v2.csv"
+    },
+    {
+      "draw_no": 6992,
+      "draw_date": "2026-05-27",
+      "prize_hits": {
+        "straight": null,
+        "box": null,
+        "set_straight": null,
+        "set_box": null,
+        "mini": null
+      },
+      "prize_amounts": {
+        "straight": 90500,
+        "box": 30100,
+        "set_straight": 60300,
+        "set_box": 15000,
+        "mini": 9000
       },
       "payout_proxy_amount": null,
       "source_label": "C:\\Users\\hk\\source\\numbers4\\numbers4\\core_systems\\data\\numbers3_results_v2.csv"
