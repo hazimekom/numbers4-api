@@ -129383,9 +129383,9 @@
     },
     "prize": {
       "straight": 69100,
-      "box": null,
-      "set_straight": null,
-      "set_box": null,
+      "box": 0,
+      "set_straight": 0,
+      "set_box": 0,
       "mini": 6900
     }
   },
@@ -132883,6 +132883,25 @@
       "set_straight": 21700,
       "set_box": 3100,
       "mini": 3700
+    }
+  },
+  {
+    "draw_no": 6995,
+    "draw_date": "2026-06-01",
+    "result": {
+      "values": [
+        2,
+        8,
+        6
+      ],
+      "display": "286"
+    },
+    "prize": {
+      "straight": 80400,
+      "box": 13400,
+      "set_straight": 46900,
+      "set_box": 6700,
+      "mini": 8000
     }
   }
 ]
