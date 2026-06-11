@@ -1,20 +1,20 @@
 {
   "game": "numbers3",
-  "draw_no": 7002,
-  "draw_date": "2026-06-10",
+  "draw_no": 7003,
+  "draw_date": "2026-06-11",
   "result": {
     "values": [
-      1,
-      5,
-      9
+      7,
+      0,
+      7
     ],
-    "display": "159"
+    "display": "707"
   },
   "prize": {
-    "straight": 37400,
-    "box": 6200,
-    "set_straight": 21800,
-    "set_box": 3100,
-    "mini": 3700
+    "straight": 106100,
+    "box": 35300,
+    "set_straight": 70700,
+    "set_box": 17600,
+    "mini": 10600
   }
 }
