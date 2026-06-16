@@ -1,17 +1,17 @@
 {
-  "draw_no": 7005,
-  "date": "2026-06-15",
+  "draw_no": 7006,
+  "date": "2026-06-16",
   "digits": [
-    2,
-    3,
+    0,
+    6,
     4,
-    0
+    2
   ],
-  "winning_number": "2340",
+  "winning_number": "0642",
   "prize": {
-    "straight": 1127800,
-    "box": 46900,
-    "set_straight": 587300,
-    "set_box": 23400
+    "straight": 1212700,
+    "box": 50500,
+    "set_straight": 631600,
+    "set_box": 25200
   }
 }
