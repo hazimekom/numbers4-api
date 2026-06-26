@@ -2,16 +2,17 @@
 
 📊 **ナンバーズ4 当選番号データ API**
 
-GitHub Pages を利用した静的 JSON データ配信サービスです。
+Firebase Hosting を利用した静的 JSON データ配信サービスです。
 
 ## 🚀 エンドポイント
 
 | エンドポイント | 説明 |
 |---------------|------|
-| [`/api/v1/latest.json`](https://hazimekom.github.io/numbers4-api/api/v1/latest.json) | 最新1件のみ（軽量） |
-| [`/api/v1/numbers4_all_min.json`](https://hazimekom.github.io/numbers4-api/api/v1/numbers4_all_min.json) | 全履歴（番号のみ・軽量版） |
-| [`/api/v1/numbers4_all_full.json`](https://hazimekom.github.io/numbers4-api/api/v1/numbers4_all_full.json) | 全履歴（配当金含む・詳細版） |
-| [`/api/v1/version.json`](https://hazimekom.github.io/numbers4-api/api/v1/version.json) | バージョン情報（更新判定用） |
+| [`/api/v1/latest.json`](https://numbers4-1d961.web.app/api/v1/latest.json) | 最新1件のみ（軽量） |
+| [`/api/v1/numbers4_all_min.json`](https://numbers4-1d961.web.app/api/v1/numbers4_all_min.json) | 全履歴（番号のみ・軽量版） |
+| [`/api/v1/numbers4_all_full.json`](https://numbers4-1d961.web.app/api/v1/numbers4_all_full.json) | 全履歴（配当金含む・詳細版） |
+| [`/api/v1/version.json`](https://numbers4-1d961.web.app/api/v1/version.json) | バージョン情報（更新判定用） |
+| [`/deploy-manifest.json`](https://numbers4-1d961.web.app/deploy-manifest.json) | Hosting deploy hash（重複deploy判定用） |
 
 ## 📋 データ形式
 
@@ -88,7 +89,7 @@ GitHub Pages を利用した静的 JSON データ配信サービスです。
 ### JavaScript / TypeScript
 
 ```javascript
-const API_BASE = 'https://hazimekom.github.io/numbers4-api/api/v1';
+const API_BASE = 'https://numbers4-1d961.web.app/api/v1';
 
 // 最新データを取得
 const response = await fetch(`${API_BASE}/latest.json`);
@@ -107,7 +108,7 @@ if (version.latest_draw_no > localDrawNo) {
 
 ```dart
 final url = Uri.parse(
-  'https://hazimekom.github.io/numbers4-api/api/v1/latest.json',
+  'https://numbers4-1d961.web.app/api/v1/latest.json',
 );
 final response = await http.get(url);
 final data = jsonDecode(response.body);
@@ -119,7 +120,7 @@ print('第${data['draw_no']}回: ${data['digits'].join('')}');
 ```python
 import requests
 
-API_BASE = 'https://hazimekom.github.io/numbers4-api/api/v1'
+API_BASE = 'https://numbers4-1d961.web.app/api/v1'
 response = requests.get(f'{API_BASE}/latest.json')
 data = response.json()
 print(f"第{data['draw_no']}回: {''.join(map(str, data['digits']))}")
@@ -127,11 +128,13 @@ print(f"第{data['draw_no']}回: {''.join(map(str, data['digits']))}")
 
 ## 🔒 CORS
 
-GitHub Pages は CORS 許可済みのため、ブラウザやスマホアプリから制限なく取得可能です。
+Firebase Hosting は CORS 許可済みのため、ブラウザやスマホアプリから制限なく取得可能です。
 
 ## ⚠️ 注意事項
 
-- GitHub Pages は高負荷には適していません。大量リクエストが予想される場合は Firebase Hosting 等への移行を検討してください。
+- Firebase Hosting deploy は GitHub Actions で実行します。
+- Actions では Node.js と firebase-tools を固定し、`deploy-manifest.json` の hash が公開済みと一致する場合は deploy を skip します。
+- `firebase-tools` の Release API retry で `supplied version ... is the current active version` が発生した場合でも、公開済みhashが一致すれば成功扱いにします。
 - 全履歴データは約 1MB 程度です。モバイル環境ではキャッシュの活用を推奨します。
 
 ## 📜 ライセンス
@@ -140,4 +143,4 @@ MIT License
 
 ---
 
-**[🏠 ホームページを見る](https://hazimekom.github.io/numbers4-api/)**
+**[🏠 ホームページを見る](https://numbers4-1d961.web.app/)**

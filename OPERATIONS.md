@@ -2,9 +2,9 @@
 
 ## 概要
 
-このリポジトリは **GitHub Pages** を利用した静的 JSON API を提供します。
+このリポジトリは **Firebase Hosting** を利用した静的 JSON API を提供します。
 
-- **URL**: https://hazimekom.github.io/numbers4-api/
+- **URL**: https://numbers4-1d961.web.app/
 - **データ更新**: ローカルで生成 → main ブランチに push
 
 ---
@@ -26,8 +26,11 @@ numbers4-api/
 │           └── schema.json       # スキーマ定義
 └── .github/
     └── workflows/
-        └── deploy-pages.yml      # Pages デプロイ用
+        └── firebase-deploy.yml   # Firebase Hosting デプロイ用
 ```
+
+GitHub Actions 実行時のみ `deploy/` を生成し、Firebase Hosting の公開対象は
+`firebase.json` の `public: "deploy"` に限定する。repo root を直接公開しない。
 
 ---
 
@@ -35,7 +38,7 @@ numbers4-api/
 
 | リポジトリ | 可視性 | 用途 |
 |-----------|--------|------|
-| `numbers4-api` | **Public** | JSON API 配信（GitHub Pages） |
+| `numbers4-api` | **Public** | JSON API 配信（Firebase Hosting） |
 | `numbers4-app` | **Private** | Flutter アプリ本体 |
 | `numbers4` | Private | Python 予測モデル・スクレイピング |
 
@@ -78,18 +81,91 @@ git push
 
 ### 3. デプロイ確認
 
-- GitHub Actions の **Deploy to GitHub Pages** が自動実行される
-- 数分後に https://hazimekom.github.io/numbers4-api/api/v1/latest.json で確認
+- GitHub Actions の **Deploy to Firebase Hosting** が自動実行される
+- 数分後に https://numbers4-1d961.web.app/api/v1/latest.json で確認
+
+---
+
+## Firebase Hosting Deploy Hardening
+
+### 固定Version
+
+GitHub Actions は以下を固定する。
+
+| 項目 | Version | 理由 |
+|------|---------|------|
+| Node.js | `22.23.1` | Node `22.23.0` / `24.17.0` の keep-alive regression による `Premature close` を避けるため |
+| firebase-tools | `15.22.1` | `latest` 追従による突発的な Firebase CLI 挙動変更を避けるため |
+
+### Known Issue
+
+2026-06-25〜26 に、`firebase-tools` / Node.js の HTTP keep-alive 周辺で
+Google API 通信が `Premature close` になる事象が確認された。
+
+Hosting Release API は非冪等であり、1回目のReleaseがFirebase側で成功した後に
+クライアント側が通信断としてretryすると、同じVersionへの2回目のReleaseが
+以下で失敗する。
+
+```text
+supplied version ... is the current active version
+```
+
+その場合でも、公開済み `deploy-manifest.json` の `deploy_hash` がローカル生成hashと
+一致すれば、公開自体は完了済みとみなし、workflowは成功扱いにする。
+
+参考:
+
+- `firebase-tools` Issue: `firebase/firebase-tools#10716`
+- `firebase-tools` Issue: `firebase/firebase-tools#10726`
+- Node.js Issue: `nodejs/node#63989`
+
+### Deploy Skip 条件
+
+Actions は deploy 前に `deploy/` を生成し、`deploy-manifest.json` に
+成果物hashを保存する。
+
+```text
+https://numbers4-1d961.web.app/deploy-manifest.json
+```
+
+公開済みhashと今回生成hashが一致する場合は、Firebase Hosting releaseを作らず
+successで終了する。
+
+### Deploy対象
+
+Hosting公開対象は `deploy/` のみ。
+
+含めるもの:
+
+- `index.html`
+- `api/`
+- `data/`
+- `deploy-manifest.json`
+
+含めないもの:
+
+- `.git/`
+- `.github/`
+- `README.md`
+- `OPERATIONS.md`
+- secrets / service account keys
+
+### 将来方針
+
+`FirebaseExtended/action-hosting-deploy` で扱いきれない retry / idempotency 制御が
+再発する場合は、Firebase Hosting REST API を直接呼ぶ deploy wrapper へ移行する。
+その場合は、Release API の `current active version` を明示的に成功扱いできる。
 
 ---
 
 ## トラブルシューティング
 
-### Pages が更新されない
+### Firebase Hosting が更新されない
 
-1. GitHub リポジトリの **Settings** → **Pages** を確認
-2. **Source** が `GitHub Actions` になっているか確認
-3. Actions タブでデプロイ状況を確認
+1. Actions タブで **Deploy to Firebase Hosting** の実行状況を確認
+2. `deploy-manifest.json` の `deploy_hash` を確認
+3. `Deploy skip reason` が `live_hash_matches` の場合は更新不要
+4. `current active version` が出ても、live hashが一致していれば公開済み
 
 ### JSON が不正
 
@@ -100,11 +176,12 @@ python -m json.tool api/v1/latest.json
 
 ---
 
-## GitHub Pages 設定
+## Firebase Hosting 設定
 
-1. **Settings** → **Pages**
-2. **Source**: `GitHub Actions`（推奨）または `Deploy from a branch`
-3. **Branch**: `main` / `/ (root)`
+- Project: `numbers4-1d961`
+- Site: `numbers4-1d961`
+- Workflow: `.github/workflows/firebase-deploy.yml`
+- Secret: `FIREBASE_SERVICE_ACCOUNT_NUMBERS4_1D961`
 
 ---
 

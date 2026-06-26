@@ -1,17 +1,10 @@
 {
   "hosting": {
-    "public": ".",
+    "public": "deploy",
     "ignore": [
       "firebase.json",
-      "README.md",
-      "OPERATIONS.md",
-      ".github/**",
       "**/.*",
-      "**/node_modules/**",
-      "**/*firebase-adminsdk-*.json",
-      "**/*-firebase-adminsdk-*.json",
-      "secrets/**",
-      "**/secrets/**"
+      "**/node_modules/**"
     ],
     "headers": [
       {

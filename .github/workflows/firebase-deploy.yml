@@ -21,6 +21,11 @@ concurrency:
   group: firebase-hosting
   cancel-in-progress: false
 
+env:
+  FIREBASE_TOOLS_VERSION: "15.22.1"
+  NODE_VERSION: "22.23.1"
+  FIREBASE_HOSTING_ORIGIN: "https://numbers4-1d961.web.app"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -28,10 +33,137 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Prepare Firebase Hosting artifact
+        id: prepare
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          rm -rf deploy
+          mkdir -p deploy
+
+          cp -R api deploy/api
+          cp -R data deploy/data
+          cp index.html deploy/index.html
+
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import hashlib
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          root = Path("deploy")
+          entries = []
+          for path in sorted(root.rglob("*")):
+              if not path.is_file() or path.name == "deploy-manifest.json":
+                  continue
+              rel = path.relative_to(root).as_posix()
+              file_hash = hashlib.sha256(path.read_bytes()).hexdigest()
+              entries.append(f"{rel}\0{file_hash}")
+
+          deploy_hash = hashlib.sha256("\n".join(entries).encode("utf-8")).hexdigest()
+          manifest = {
+              "deploy_hash": deploy_hash,
+              "file_count": len(entries),
+              "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+              "source": "github-actions",
+          }
+          (root / "deploy-manifest.json").write_text(
+              json.dumps(manifest, ensure_ascii=False, sort_keys=True, separators=(",", ":")),
+              encoding="utf-8",
+          )
+
+          print(f"deploy_hash={deploy_hash}")
+          print(f"deploy_file_count={len(entries)}")
+          PY
+
+      - name: Log deploy environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Node version: $(node --version)"
+          echo "npm version: $(npm --version)"
+          echo "firebase-tools version: $(npx --yes firebase-tools@${FIREBASE_TOOLS_VERSION} --version)"
+          echo "Deploy hash: ${{ steps.prepare.outputs.deploy_hash }}"
+          echo "Deploy file count: ${{ steps.prepare.outputs.deploy_file_count }}"
+
+      - name: Check live deploy hash
+        id: live
+        shell: bash
+        env:
+          LOCAL_DEPLOY_HASH: ${{ steps.prepare.outputs.deploy_hash }}
+        run: |
+          set -euo pipefail
+
+          manifest_url="${FIREBASE_HOSTING_ORIGIN}/deploy-manifest.json"
+          remote_json="$(curl -fsSL --retry 2 --max-time 10 "$manifest_url" || true)"
+          remote_hash="$(python3 -c 'import json,sys; print(json.load(sys.stdin).get("deploy_hash", ""))' <<< "$remote_json" 2>/dev/null || true)"
+
+          echo "Remote deploy hash: ${remote_hash:-missing}"
+          echo "Local deploy hash: ${LOCAL_DEPLOY_HASH}"
+
+          if [[ -n "$remote_hash" && "$remote_hash" == "$LOCAL_DEPLOY_HASH" ]]; then
+            echo "skip_deploy=true" >> "$GITHUB_OUTPUT"
+            echo "skip_reason=live_hash_matches" >> "$GITHUB_OUTPUT"
+            echo "Deploy skip reason: live_hash_matches"
+          else
+            echo "skip_deploy=false" >> "$GITHUB_OUTPUT"
+            echo "skip_reason=hash_changed_or_missing" >> "$GITHUB_OUTPUT"
+            echo "Deploy skip reason: hash_changed_or_missing"
+          fi
+
       - name: Deploy to Firebase Hosting
+        id: deploy
+        if: steps.live.outputs.skip_deploy != 'true'
+        continue-on-error: true
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_NUMBERS4_1D961 }}
           projectId: numbers4-1d961
           channelId: live
+          firebaseToolsVersion: "15.22.1"
+
+      - name: Verify deploy result
+        shell: bash
+        env:
+          LOCAL_DEPLOY_HASH: ${{ steps.prepare.outputs.deploy_hash }}
+          SKIP_DEPLOY: ${{ steps.live.outputs.skip_deploy }}
+          SKIP_REASON: ${{ steps.live.outputs.skip_reason }}
+          DEPLOY_OUTCOME: ${{ steps.deploy.outcome }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$SKIP_DEPLOY" == "true" ]]; then
+            echo "Firebase Hosting deploy skipped successfully: ${SKIP_REASON}"
+            exit 0
+          fi
+
+          if [[ "$DEPLOY_OUTCOME" == "success" ]]; then
+            echo "Firebase Hosting deploy completed successfully."
+            exit 0
+          fi
+
+          echo "Firebase Hosting action outcome: ${DEPLOY_OUTCOME}"
+          echo "Checking live deploy hash before failing the workflow..."
+
+          manifest_url="${FIREBASE_HOSTING_ORIGIN}/deploy-manifest.json"
+          remote_json="$(curl -fsSL --retry 3 --max-time 10 "$manifest_url" || true)"
+          remote_hash="$(python3 -c 'import json,sys; print(json.load(sys.stdin).get("deploy_hash", ""))' <<< "$remote_json" 2>/dev/null || true)"
+
+          echo "Remote deploy hash after action failure: ${remote_hash:-missing}"
+          echo "Local deploy hash: ${LOCAL_DEPLOY_HASH}"
+
+          if [[ -n "$remote_hash" && "$remote_hash" == "$LOCAL_DEPLOY_HASH" ]]; then
+            echo "Firebase Hosting action failed after the live site reached the requested deploy hash."
+            echo "Treating this as success to work around firebase-tools duplicate release retry failures."
+            exit 0
+          fi
+
+          echo "Firebase Hosting action failed and the live deploy hash does not match."
+          exit 1
