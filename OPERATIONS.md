@@ -88,6 +88,25 @@ git push
 
 ## Firebase Hosting Deploy Hardening
 
+### GitHub Actions 運用手順
+
+通常運用では、`main` への push または schedule により
+`.github/workflows/firebase-deploy.yml` が実行される。
+
+手動確認が必要な場合は、GitHub Actions の `workflow_dispatch` から
+**Deploy to Firebase Hosting** を実行する。
+
+確認するログ:
+
+- `Node version`
+- `npm version`
+- `firebase-tools version`
+- `Deploy hash`
+- `Deploy file count`
+- `Remote deploy hash`
+- `Local deploy hash`
+- `Deploy skip reason`
+
 ### 固定Version
 
 GitHub Actions は以下を固定する。
@@ -155,6 +174,10 @@ Hosting公開対象は `deploy/` のみ。
 `FirebaseExtended/action-hosting-deploy` で扱いきれない retry / idempotency 制御が
 再発する場合は、Firebase Hosting REST API を直接呼ぶ deploy wrapper へ移行する。
 その場合は、Release API の `current active version` を明示的に成功扱いできる。
+
+認証方式は現状 `FIREBASE_SERVICE_ACCOUNT_NUMBERS4_1D961` の Service Account JSON を
+利用する。将来は Workload Identity Federation へ移行し、長期鍵を使わない構成にする。
+ただし WIF 移行時は `firebase-tools` の ADC / WIF 関連Issueを再確認してから行う。
 
 ---
 
