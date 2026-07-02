@@ -1,9 +1,16 @@
 {
-  "version": "2026-07-01-7017",
+  "version": "2026-07-02-7018",
   "schema": "1.0.0",
-  "last_update": "2026-07-01T22:08:03.998061+09:00",
-  "latest_draw_no": 7017,
-  "latest_date": "2026-07-01",
-  "total_records": 7017,
-  "source_sha256": "2b60a8be578d14aed76716fa854bda45d517b5b2edf7697ac804210eb2bf682d"
+  "last_update": "2026-07-02T20:53:34.213243+09:00",
+  "latest_draw_no": 7018,
+  "latest_date": "2026-07-02",
+  "total_records": 7018,
+  "source_sha256": "43e2b829a1fb3b0cae8d9f01e2a73199857ae6c2ea43f9260f1a3922b0a0f819",
+  "update_source": "paypay",
+  "detected_latest_draw_no": 7018,
+  "verification_status": "passed",
+  "verification_sources": [
+    "paypay",
+    "scraper"
+  ]
 }
