@@ -1,17 +1,17 @@
 {
-  "draw_no": 7020,
-  "date": "2026-07-06",
+  "draw_no": 7021,
+  "date": "2026-07-07",
   "digits": [
-    9,
-    1,
+    8,
     3,
-    4
+    3,
+    9
   ],
-  "winning_number": "9134",
+  "winning_number": "8339",
   "prize": {
-    "straight": 1015800,
-    "box": 42300,
-    "set_straight": 529000,
-    "set_box": 21100
+    "straight": 1265000,
+    "box": 105400,
+    "set_straight": 685200,
+    "set_box": 52700
   }
 }
