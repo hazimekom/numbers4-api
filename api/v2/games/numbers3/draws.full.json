@@ -133587,5 +133587,24 @@
       "set_box": 7000,
       "mini": 8500
     }
+  },
+  {
+    "draw_no": 7032,
+    "draw_date": "2026-07-22",
+    "result": {
+      "values": [
+        4,
+        9,
+        2
+      ],
+      "display": "492"
+    },
+    "prize": {
+      "straight": 101000,
+      "box": 16800,
+      "set_straight": 58900,
+      "set_box": 8400,
+      "mini": 10100
+    }
   }
 ]
