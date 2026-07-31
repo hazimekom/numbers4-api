@@ -1,10 +1,10 @@
 {
   "game": "numbers3",
-  "version": "2026-07-30-7038",
+  "version": "2026-07-31-7039",
   "schema": "2.0.0",
-  "last_update": "2026-07-30T20:53:17.270097+09:00",
-  "latest_draw_no": 7038,
-  "latest_date": "2026-07-30",
-  "total_records": 7038,
-  "source_sha256": "dba79fc0b93096820d63a0cef947320b853a031fe68e0d8ea1d4c141505ff4b9"
+  "last_update": "2026-07-31T20:52:00.701956+09:00",
+  "latest_draw_no": 7039,
+  "latest_date": "2026-07-31",
+  "total_records": 7039,
+  "source_sha256": "cd63fca17d5c7578e42b664dd2c6e3cb05110f9382214662348a8753ab83661d"
 }
