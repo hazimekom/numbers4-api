@@ -133891,5 +133891,24 @@
       "set_box": 7400,
       "mini": 8900
     }
+  },
+  {
+    "draw_no": 7048,
+    "draw_date": "2026-08-13",
+    "result": {
+      "values": [
+        7,
+        7,
+        0
+      ],
+      "display": "770"
+    },
+    "prize": {
+      "straight": 98600,
+      "box": 32800,
+      "set_straight": 65700,
+      "set_box": 16400,
+      "mini": 9800
+    }
   }
 ]
