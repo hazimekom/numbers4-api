@@ -1,20 +1,20 @@
 {
   "game": "numbers3",
-  "draw_no": 7050,
-  "draw_date": "2026-08-17",
+  "draw_no": 7051,
+  "draw_date": "2026-08-18",
   "result": {
     "values": [
-      9,
-      7,
-      8
+      4,
+      0,
+      9
     ],
-    "display": "978"
+    "display": "409"
   },
   "prize": {
-    "straight": 50200,
-    "box": 8300,
-    "set_straight": 29200,
-    "set_box": 4100,
-    "mini": 5000
+    "straight": 93000,
+    "box": 15500,
+    "set_straight": 54200,
+    "set_box": 7700,
+    "mini": 9300
   }
 }
