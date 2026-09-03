@@ -134176,5 +134176,24 @@
       "set_box": 13600,
       "mini": 8100
     }
+  },
+  {
+    "draw_no": 7063,
+    "draw_date": "2026-09-03",
+    "result": {
+      "values": [
+        1,
+        6,
+        6
+      ],
+      "display": "166"
+    },
+    "prize": {
+      "straight": 117800,
+      "box": 39200,
+      "set_straight": 78500,
+      "set_box": 19600,
+      "mini": 11700
+    }
   }
 ]
