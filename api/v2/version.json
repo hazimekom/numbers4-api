@@ -1,11 +1,11 @@
 {
   "schema": "2.0.0",
-  "generated_at": "2026-10-14T20:48:53+09:00",
+  "generated_at": "2026-10-15T20:41:26+09:00",
   "games": {
     "numbers3": {
-      "latest_draw_no": 7092,
-      "latest_date": "2026-10-14",
-      "total_records": 7092,
+      "latest_draw_no": 7093,
+      "latest_date": "2026-10-15",
+      "total_records": 7093,
       "version_path": "/api/v2/games/numbers3/version.json",
       "latest_path": "/api/v2/games/numbers3/latest.json",
       "draws_full_path": "/api/v2/games/numbers3/draws.full.json",
