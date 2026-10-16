@@ -134765,5 +134765,24 @@
       "set_box": 9000,
       "mini": 10800
     }
+  },
+  {
+    "draw_no": 7094,
+    "draw_date": "2026-10-16",
+    "result": {
+      "values": [
+        0,
+        1,
+        1
+      ],
+      "display": "011"
+    },
+    "prize": {
+      "straight": 96400,
+      "box": 32100,
+      "set_straight": 64200,
+      "set_box": 16000,
+      "mini": 9600
+    }
   }
 ]
