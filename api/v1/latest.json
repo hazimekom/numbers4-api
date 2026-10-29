@@ -1,17 +1,17 @@
 {
-  "draw_no": 7102,
-  "date": "2026-10-28",
+  "draw_no": 7103,
+  "date": "2026-10-29",
   "digits": [
-    3,
+    2,
+    4,
     9,
-    8,
-    6
+    1
   ],
-  "winning_number": "3986",
+  "winning_number": "2491",
   "prize": {
-    "straight": 896500,
-    "box": 37300,
-    "set_straight": 466900,
-    "set_box": 18600
+    "straight": 428700,
+    "box": 17800,
+    "set_straight": 223200,
+    "set_box": 8900
   }
 }
