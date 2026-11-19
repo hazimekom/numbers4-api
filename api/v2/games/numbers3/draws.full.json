@@ -135221,5 +135221,24 @@
       "set_box": 9900,
       "mini": 11900
     }
+  },
+  {
+    "draw_no": 7118,
+    "draw_date": "2026-11-19",
+    "result": {
+      "values": [
+        2,
+        2,
+        9
+      ],
+      "display": "229"
+    },
+    "prize": {
+      "straight": 115800,
+      "box": 38600,
+      "set_straight": 77200,
+      "set_box": 19300,
+      "mini": 11500
+    }
   }
 ]
