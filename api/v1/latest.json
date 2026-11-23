@@ -1,17 +1,17 @@
 {
-  "draw_no": 7119,
-  "date": "2026-11-20",
+  "draw_no": 7120,
+  "date": "2026-11-23",
   "digits": [
-    6,
-    4,
     2,
-    5
+    9,
+    7,
+    9
   ],
-  "winning_number": "6425",
+  "winning_number": "2979",
   "prize": {
-    "straight": 1168300,
-    "box": 48600,
-    "set_straight": 608400,
-    "set_box": 24300
+    "straight": 1282800,
+    "box": 106900,
+    "set_straight": 694800,
+    "set_box": 53400
   }
 }
