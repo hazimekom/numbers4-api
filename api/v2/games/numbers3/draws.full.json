@@ -135335,5 +135335,24 @@
       "set_box": 7000,
       "mini": 8400
     }
+  },
+  {
+    "draw_no": 7124,
+    "draw_date": "2026-11-27",
+    "result": {
+      "values": [
+        2,
+        7,
+        7
+      ],
+      "display": "277"
+    },
+    "prize": {
+      "straight": 104200,
+      "box": 34700,
+      "set_straight": 69400,
+      "set_box": 17300,
+      "mini": 10400
+    }
   }
 ]
